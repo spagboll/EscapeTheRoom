@@ -13,6 +13,8 @@ public class Interact : MonoBehaviour {
 
 	public bool isInteracting; 
 
+
+
 	// Use this for initialization
 	void Start () {
 		if (interactIcon != null) {
@@ -38,7 +40,14 @@ public class Interact : MonoBehaviour {
 						interactIcon.enabled = false;
 
 					}
+					if (hit.collider.CompareTag ("Keypad")) {
+						//hit.collider.GetComponent<Keypad> ().ShowKeypad ();.
+						hit.collider.GetComponent<showKeypad>().ShowBigKeyPad();
+						interactIcon.enabled = false;
+					
+					}
 				}
+
 			}
 		} else {
 			interactIcon.enabled = false;

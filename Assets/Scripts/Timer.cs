@@ -13,9 +13,14 @@ public class Timer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//startTime = timerText;
-		StartCoroutine("LoseTime");
+		timerText.enabled = false;
 	}
-	
+
+	public void StartTimer(){
+	timerText.enabled = true;
+	StartCoroutine("LoseTime");
+	} 
+
 	// Update is called once per frame
 	void Update () {
 		timerText.text = (timeLeft.ToString());
