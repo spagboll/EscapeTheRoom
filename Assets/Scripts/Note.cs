@@ -32,7 +32,6 @@ public class Note : MonoBehaviour {
 		beginButton.SetActive (true);
 
 		playerObject.GetComponent<FirstPersonController>().enabled = false; 
-
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
 	}
