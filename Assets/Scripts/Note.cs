@@ -15,12 +15,20 @@ public class Note : MonoBehaviour {
 	public GameObject playerObject;
 	public GameObject timer;
 
+	public GameObject note1;
+	public GameObject note2;
+	public GameObject note3;
+	public GameObject note4;
+	public GameObject keyNotes;
+
+
 
 	// Use this for initialization
 	void Start () {
 		noteImage.enabled = false;
 		hideNoteButton.SetActive(false);
 		beginButton.SetActive (false);
+		keyNotes.SetActive (false);
 		}
 	
 	public void ShowNoteImage()
@@ -51,6 +59,8 @@ public class Note : MonoBehaviour {
 
 	public void BeginChallenge(){
 		this.HideNoteImage ();
+
 		timer.GetComponent<Timer> ().StartTimer();
+		keyNotes.SetActive (true);
 	}
 }
